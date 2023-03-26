@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='!')
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
-@bot.command(name='crypto')
+@bot.command(name='!crypto')
 async def get_crypto_prices(ctx):
     # Fetch the price data for all cryptocurrencies from Coinbase
     response = requests.get(f'{COINBASE_API_ENDPOINT}/prices', params={'currency': 'USD'})
